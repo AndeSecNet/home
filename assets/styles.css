@@ -1,0 +1,150 @@
+/* Andes Secure Network — styles
+   Paleta: fondo oscuro + acentos cian/azul/neón para sensación de tecnología segura
+*/
+:root{
+  --bg:#0b0f19;
+  --bg-elev:#111828;
+  --muted:#0f1422;
+  --text:#e6eefc;
+  --text-dim:#aab8dd;
+  --primary:#32d1ff;
+  --primary-2:#5b8cff;
+  --accent:#64ffda;
+  --glass: rgba(255,255,255,0.06);
+  --stroke: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans";
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+}
+
+/* Skins (cambiables) */
+.skin-grid{
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(99,102,241,0.06) 0 40%, transparent 40%),
+    linear-gradient(180deg, rgba(11,15,25,0.9), rgba(11,15,25,0.9)),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: cover, cover, 48px 48px, 48px 48px;
+  background-position:center,center,center,center;
+}
+.skin-mesh{
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(91,140,255,0.25), transparent 40%),
+    radial-gradient(800px 400px at 10% 110%, rgba(50,209,255,0.25), transparent 40%),
+    var(--bg);
+}
+.skin-radial{
+  background:
+    radial-gradient(1000px 600px at 30% 0%, rgba(100,255,218,0.20), transparent 50%),
+    radial-gradient(900px 400px at 80% 100%, rgba(91,140,255,0.18), transparent 50%),
+    var(--bg);
+}
+
+.container{width:min(1100px, 92vw); margin:0 auto;}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, rgba(11,15,25,0.85), rgba(11,15,25,0.65));
+  border-bottom:1px solid var(--stroke);
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 2px;}
+.brand{display:flex; gap:14px; align-items:center; text-decoration:none; color:var(--text);}
+.brand-logo{width:58px; height:auto; filter:drop-shadow(0 6px 12px rgba(0,0,0,0.35));}
+.brand-title{font-weight:700; letter-spacing:0.3px; font-size:1.05rem}
+.brand-sub{font-size:0.78rem; color:var(--text-dim)}
+.nav{display:flex; gap:18px; align-items:center;}
+.nav a{color:var(--text-dim); text-decoration:none; font-weight:600;}
+.nav a:hover{color:var(--text);}
+.menu-btn{display:none; background:none; border:none; color:var(--text); font-size:1.5rem}
+
+/* Buttons */
+.btn{padding:10px 16px; border-radius:12px; border:1px solid var(--stroke); text-decoration:none; font-weight:700; display:inline-block; box-shadow:var(--shadow)}
+.btn-primary{background: linear-gradient(135deg, var(--primary), var(--primary-2)); color:#031222; border-color: transparent;}
+.btn-outline{background: transparent; color: var(--text);}
+.btn:hover{transform: translateY(-1px);}
+
+/* HERO */
+.hero{padding:64px 0 36px;}
+.hero-grid{display:grid; grid-template-columns: 1.1fr 0.9fr; gap:28px; align-items:stretch;}
+.hero-copy h1{font-size: clamp(2rem, 4vw, 3rem); margin:0 0 10px}
+.grad-text{background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.hero-copy p{color:var(--text-dim); max-width: 60ch;}
+.hero-cta{display:flex; gap:12px; margin:18px 0 6px;}
+.skins{margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.chip{border:1px solid var(--stroke); background:var(--glass); color:var(--text); padding:6px 10px; border-radius:999px; cursor:pointer; font-weight:600}
+.chip:hover{border-color:var(--primary)}
+
+/* Glass card */
+.glass{background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)); border:1px solid var(--stroke); border-radius:16px; box-shadow: var(--shadow);}
+.hero-card{padding:22px 20px}
+.shield svg{width:84px; height:84px; display:block; margin:4px auto 14px;}
+.shield .s1{fill:rgba(99,102,241,0.35)}
+.shield .s2{fill:rgba(50,209,255,0.85)}
+.shield .s3{fill:rgba(255,255,255,0.85)}
+.bullets{list-style: none; margin:0; padding:0; display:grid; gap:10px;}
+.bullets li{padding-left:10px; border-left:3px solid var(--primary); color:var(--text-dim)}
+
+/* Sections */
+.section{padding:72px 0}
+.section h2{font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin:0 0 18px}
+.muted{background: var(--muted); border-top:1px solid var(--stroke); border-bottom:1px solid var(--stroke);}
+
+/* Cards grid */
+.cards{display:grid; grid-template-columns: repeat(4,1fr); gap:16px}
+.card{background:var(--bg-elev); border:1px solid var(--stroke); border-radius:16px; padding:18px; box-shadow:var(--shadow)}
+.card h3{margin:10px 0 8px}
+.card p{color:var(--text-dim)}
+.card-ico svg{width:28px; height:28px; fill: var(--primary)}
+
+/* Trust badges */
+.trust{ text-align:center }
+.trust-list{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:12px 0 8px; padding:0; list-style:none}
+.badge{ display:inline-block; padding:8px 12px; border:1px solid var(--stroke); border-radius:999px; background:var(--glass); color:var(--text); font-weight:700 }
+.trust-copy{ color:var(--text-dim) }
+
+/* Tech pills */
+.grid-logos{display:grid; grid-template-columns: repeat(4, 1fr); gap:10px}
+.logo-pill{ text-align:center; padding:10px 14px; border-radius:999px; border:1px solid var(--stroke); background:var(--glass); font-weight:700; color:var(--text)}
+
+/* Contact */
+.contact{max-width:760px;}
+.contact-form{display:block}
+.contact-form .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.contact-form label{display:block; font-weight:700; color:var(--text)}
+.contact-form input, .contact-form textarea{
+  width:100%; margin-top:6px; padding:10px 12px; background:rgba(255,255,255,0.04);
+  color:var(--text); border:1px solid var(--stroke); border-radius:10px;
+}
+.contact-form input:focus, .contact-form textarea:focus{outline:2px solid var(--primary);}
+.contact-form .actions{align-items:center}
+.form-note{color:var(--text-dim); font-size:0.85rem; margin-top:8px}
+
+/* Footer */
+.site-footer{ border-top:1px solid var(--stroke); background: rgba(0,0,0,0.35);}
+.footer-inner{ display:flex; align-items:center; justify-content:space-between; padding:18px 2px; }
+.footer-inner a{ color:var(--text-dim); text-decoration:none }
+.footer-inner a:hover{ color:var(--text) }
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns: 1fr;}
+  .cards{grid-template-columns: repeat(2,1fr)}
+  .grid-logos{grid-template-columns: repeat(3,1fr)}
+}
+@media (max-width: 640px){
+  .nav{display:none}
+  .menu-btn{display:block}
+  .cards{grid-template-columns: 1fr}
+  .grid-logos{grid-template-columns: repeat(2,1fr)}
+  .contact-form .row{grid-template-columns:1fr}
+}
