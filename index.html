@@ -1,13 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>AndeSecNet</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andes Secure Network</title>
+  <meta name="description" content="Seguridad de redes de siguiente generación: visibilidad, prevención y respuesta con performance de clase empresarial." />
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preload" as="image" href="assets/logo.png">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
-  <h1>¡Hola, bienvenid@ a AndeSecNet!</h1>
-  <p>Estamos preparando el sitio para ti.</p>
-  <script src="script.js"></script>
+<body class="skin-mesh">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo.png" alt="Logo Andes Secure Network" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">Andes <strong>Secure</strong> Network</span>
+          <span class="brand-sub">Tecnología confiable · Seguridad de redes</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#confianza">Confianza</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+      </nav>
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Seguridad que inspira <span class="grad-text">confianza</span></h1>
+          <p>Protegemos tu infraestructura con arquitecturas Zero‑Trust, segmentación inteligente y visibilidad total. Rendimiento de alto nivel, latencia mínima, y defensa activa.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contacto">Agendar una evaluación</a>
+            <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="skins">
+            <span class="skins-label">Skins de fondo:</span>
+            <button class="chip" data-skin="skin-mesh">Malla</button>
+            <button class="chip" data-skin="skin-grid">Grid</button>
+            <button class="chip" data-skin="skin-radial">Radial</button>
+          </div>
+        </div>
+        <div class="hero-card glass">
+          <div class="shield">
+            <!-- Simple lock/shield SVG -->
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 4l22 8v16c0 11.6-7.6 22.5-22 28C17.6 50.5 10 39.6 10 28V12l22-8z" class="s1"/>
+              <path d="M22 30a10 10 0 1120 0v6h-4v-6a6 6 0 10-12 0v6h-4v-6z" class="s2"/>
+              <rect x="26" y="36" width="12" height="10" rx="2" class="s3"/>
+            </svg>
+          </div>
+          <ul class="bullets">
+            <li>Firewall de próxima generación (NGFW) y WAF</li>
+            <li>Zero‑Trust, ZTNA, microsegmentación</li>
+            <li>SD‑WAN segura y cifrado extremo a extremo</li>
+            <li>Monitoreo 24/7 · Detección y respuesta (XDR/EDR)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Nuestros servicios</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-ico"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M12 2l8 3v7c0 5-3.3 9.7-8 11-4.7-1.3-8-6-8-11V5l8-3z'/></svg></div>
+            <h3>Arquitectura Zero‑Trust</h3>
+            <p>Acceso verificado en cada paso. Políticas mínimas de privilegio y control contextual para usuarios, apps y dispositivos.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M6 19h11a4 4 0 0 0 0-8 6 6 0 0 0-11-1A4 4 0 0 0 6 19z'/></svg></div>
+            <h3>Seguridad Multi‑Cloud</h3>
+            <p>CNAPP, CSPM y protección de cargas en AWS, Azure y GCP con postura continua y IaC segura.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico"><svg viewBox='0 0 24 24' aria-hidden='true'><circle cx='5' cy='12' r='2'/><circle cx='12' cy='12' r='2'/><circle cx='19' cy='12' r='2'/><path d='M7 12h3M14 12h3'/></svg></div>
+            <h3>Redes de alto desempeño</h3>
+            <p>SD‑WAN segura, segmentación, QoS, y telemetría en tiempo real. Listo para HPC y entornos críticos.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M4 4h12v14H4z'/><path d='M8 8h4M8 12h4'/><circle cx='17.5' cy='17.5' r='3.5'/><path d='M20 20l2 2'/></svg></div>
+            <h3>Auditoría & Cumplimiento</h3>
+            <p>Normativas ISO 27001/NIST, hardening, pruebas de penetración y respuesta a incidentes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section id="confianza" class="section muted">
+      <div class="container trust">
+        <h2>Confianza y disponibilidad</h2>
+        <ul class="trust-list">
+          <li><span class="badge">TLS 1.3</span></li>
+          <li><span class="badge">BGP Anycast</span></li>
+          <li><span class="badge">DDoS Mitigation</span></li>
+          <li><span class="badge">WAF/NGFW</span></li>
+          <li><span class="badge">SOC 24/7</span></li>
+          <li><span class="badge">Zero‑Trust</span></li>
+        </ul>
+        <p class="trust-copy">Diseños resilientes con alta disponibilidad, redundancia end‑to‑end y observabilidad avanzada. Latencias bajas y throughput sostenido.</p>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍA -->
+    <section id="tecnologia" class="section">
+      <div class="container tech">
+        <h2>Tecnologías</h2>
+        <div class="grid-logos">
+          <div class="logo-pill">Fortinet</div>
+          <div class="logo-pill">Cisco</div>
+          <div class="logo-pill">Cloudflare</div>
+          <div class="logo-pill">VMware</div>
+          <div class="logo-pill">Linux</div>
+          <div class="logo-pill">Kubernetes</div>
+          <div class="logo-pill">Elastic</div>
+          <div class="logo-pill">Grafana</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section muted">
+      <div class="container contact">
+        <h2>Hablemos</h2>
+        <p>¿Listo para elevar el nivel de seguridad de tu organización?</p>
+        <form class="contact-form" onsubmit="return handleSubmit(event)">
+          <div class="row">
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+            <label>Correo
+              <input type="email" name="correo" placeholder="tu@empresa.cl" required>
+            </label>
+          </div>
+          <label>Mensaje
+            <textarea name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+          </label>
+          <div class="row actions">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <a class="btn btn-outline" href="mailto:contacto@andesecnet.cl">Enviar por correo</a>
+          </div>
+          <p class="form-note">Esta demo no envía datos a un servidor. Puedes adaptar el submit a tu backend o servicio (Formspree, CF Workers, etc.).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Andes Secure Network · Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#confianza">Confianza</a>
+        <a href="#tecnologia">Tecnología</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
